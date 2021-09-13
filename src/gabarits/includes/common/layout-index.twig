@@ -1,0 +1,32 @@
+{% extends "./layout-base.twig" %}
+{% set body_class = "scampi-stuff" %}
+
+{% block title %}
+  <title>{{ config.site.name }} - Index</title>
+{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="{{ config.site.description }}">
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="assets/css/index.css">
+{% endblock %}
+
+{% block banner %}
+  <div class="container">
+    <h1>Index {{ config.site.name }}</h1>
+    {% if config.site.description %}
+      <p class="baseline">{{ config.site.description }}</p>
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+
+{% block skiplink %}{% endblock %}
+{% block breadcrumb %}{% endblock %}
+{% block navmain %}{% endblock %}
+{% block devcomments %}{% endblock %}

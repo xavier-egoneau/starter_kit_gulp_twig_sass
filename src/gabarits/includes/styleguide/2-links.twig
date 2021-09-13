@@ -1,0 +1,9 @@
+<p>Par convention, sur les sites de la DILA les liens externes s’ouvrent dans une nouvelle fenêtre (ou onglet). Ils sont suivis d’une icône spécifique et le title du lien comporte l’intitulé + la mention "- Nouvelle fenêtre".</p>
+<p>Les liens de téléchargement doivent comporter soit directement dans le texte, soit dans le title du lien, la mention du format et du poids du document téléchargé.</p>
+<p>Lorsqu’elle diffère de la page d’origine, la langue de la cible est renseignée dans l’attribut HTML <code>hreflang=""</code>.</p>
+<ul>
+  <li><a href="#">Lien interne</a></li>
+  <li>{{ macro.extLink('Lien externe ','http://openweb.eu.org/',baseURL) }}</li>
+  <li>{{ macro.svg('lien_courriel',baseURL) }}Contact&nbsp;: <a href="mailto:pidila@dila.gouv.fr" title="Écrire à l'équipe du Pidila">pidila@dila.gouv.fr</a></li>
+  <li>{{ macro.downloadLink("Introduction au RGAA","http://references.modernisation.gouv.fr/rgaa/RGAA-PDF/RGAA-3-2017-PDF/RGAA-3-2017-Introduction.pdf","Introduction au RGAA", "PDF, 145 ko",baseURL) }}</li>
+</ul>

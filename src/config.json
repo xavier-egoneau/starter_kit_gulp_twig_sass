@@ -1,7 +1,7 @@
 {
   "site" : {
-    "name": "Starter kit Design Product",
-    "description": "Starter kit Design product - Gulp/Sass/Twig/js/Images/Svg/serve"
+    "name": "Starter kit intégration",
+    "description": "Starter kit intégration - Gulp/Sass/Twig/js/Images/Svg/serve"
   },
   "paths": {
     "build": "../gabarits/",
