@@ -1,4 +1,4 @@
-# Starter kit Design product
+# Starter kit d'intégration web
   
 Gulp Workflow pour la création de pages statiques ou de gabarits de Design Product html/css/js utilisant le moteur de templates Twig & sass.
 
