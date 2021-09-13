@@ -58,9 +58,9 @@ On accède à la liste des tâches gulp disponibles et leur résumé à l'aide d
 ## Bonnes pratiques (A modifier en fonction du projet )
 * Ce project utilise Bootstrap v5.0.0 ... [Bootstrap doc](https://getbootstrap.com/)
 * Ce project est Atomic ... [BEM](http://getbem.com/introduction/)
+* pour la lisibilité des commits [gitmoji](https://gitmoji.dev/)
 * ...
-* Tester le code et passer la validation html
-* Tester l'accessibility...
+* Tester le code et passer la validation html & accessibilité RGAA
 
 ### Tools
 
