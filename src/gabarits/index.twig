@@ -1,0 +1,40 @@
+{% extends "includes/common/layout-index.twig" %}
+
+
+{%- macro page(name, url, status) -%}
+  <li>
+    {% if url %}
+      <a href="{{ url }}">{{ name }}</a>
+      {% else %}
+        {{ name }}
+    {% endif %}
+    {% if status %}
+      {% if status == "en cours" %}
+        <span class="page-status status-inprogress">en cours</span>
+      {% elseif status == "terminé" %}
+        <span class="page-status status-done">terminé</span>
+      {% else %}
+        <span class="page-status">{{ status }}</span>
+      {% endif %}
+    {% endif %}
+  </li>
+{% endmacro %}
+
+{% import _self as add %}
+
+{% block content %}
+  <h2>Liste des gabarits</h2>
+  <ul class="pages-list">
+    {# le styleguide toujours en premier #}
+    {{ add.page("Styleguide","styleguide.html") }}
+    {# tests ajout de pages avec ou sans statut #}
+    {{ add.page("Page statut 'en cours'","styleguide.html","en cours") }}
+    {{ add.page("Statut inconnu","styleguide.html","foo bar") }}
+    {{ add.page("Valeur statut 'terminé'","styleguide.html","terminé") }}
+    {{ add.page("Pas de statut","styleguide.html") }}
+    {{ add.page("Pas commencée") }}
+  </ul>
+  
+{% endblock %}
+
+

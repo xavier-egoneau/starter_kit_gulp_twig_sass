@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* VENDORS */
+//@import "bootstrap/bootstrap.scss";
+//@import "vendors/*.scss";
+
+
+/* lutece */
+//@import "page_template_styles_admin.scss";
+//@import "theme_lutece.scss";
+//@import "debug_theme.scss";
+
+/* project */
+@import "vendors/bootstrap/bootstrap.scss";
+@import "common/variables.scss";
+@import "components/*.scss";
+@import "pages/*.scss";
+
+/* responsive */
+@import "common/responsive.scss";
+

@@ -1,0 +1,12 @@
+{
+  "site" : {
+    "name": "Starter kit Design Product",
+    "description": "Starter kit Design product - Gulp/Sass/Twig/js/Images/Svg/serve"
+  },
+  "paths": {
+    "build": "../gabarits/",
+    "assets": "assets/",
+    "templates": "gabarits/includes/**/*.twig",
+    "pages": "gabarits/*.twig"
+  }
+}

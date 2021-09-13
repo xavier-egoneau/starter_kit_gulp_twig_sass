@@ -1,0 +1,22 @@
+
+/* Fonts  */
+$font_brand: 'Montserrat', sans-serif;
+
+/* colors  */
+
+$color--brand: #071F32;
+$color--danger: #E22B3F;
+$color--brandLight: #354BCF;
+$color--gray:#eeeeee;
+/* typos */
+$base-font-size: 10px;
+
+/* functions /mixins  */
+@function rem-calc($size) {
+    $remSize: $size / 10;
+    @return #{$remSize}rem;
+}
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: rem-calc($size);
+}

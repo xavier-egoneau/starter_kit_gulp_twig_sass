@@ -1,0 +1,38 @@
+{
+  "name": "starter-kit-design-product",
+  "description": "Starter kit Design product - Gulp/Sass/Twig/js/Images/Svg/serve",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Xavier Egoneau <xavier.egoneau@capgemini.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.1.5",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-image": "^6.2.1",
+    "gulp-jsbeautifier": "^3.0.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-open": "^3.0.1",
+    "gulp-order": "^1.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-twig": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^6.0.1",
+    "pump": "^3.0.0",
+    "sass": "^1.39.0",
+    "twig-markdown": "^0.2.1"
+  },
+  "devDependencies": {
+    "gulp-jshint": "^2.1.0",
+    "jshint": "^2.13.1"
+  }
+}

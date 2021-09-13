@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% import "./macro-generic.twig" as macro %}
+<html lang="fr" class="no-js" dir="ltr">
+
+{% block head %}
+<head>
+  <meta charset="utf-8">
+
+  {% block title %}
+  <title>{{ page.title }} - {{ config.site.name }}</title>
+  {% endblock %}
+
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% block meta %}
+  <meta name="description" content="{{ page.meta }}">
+  {% endblock %}
+
+  {% include "./block-favicon.twig" %}
+
+  {% block styles %}
+  {% if env == "prod" %}
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    {# <link rel="stylesheet" media="print" href="{{ baseURL }}assets/css/print.min.css"> #}
+  {% else %}
+    <link rel="stylesheet" href="./assets/css/style.css">
+    {# <link rel="stylesheet" media="print" href="{{ baseURL }}assets/css/print.css"> #}
+  {% endif %}
+  {% endblock %}
+
+  {% block styles_more %}
+  {% endblock %}
+
+  {% block scripts_top_more %}
+  {% endblock %}
+
+</head>
+{% endblock %} <!-- fin bloc head -->
+
+<body{% if body_class %} class="{{ body_class }}"{% endif %}>
+  <noscript>
+    <p class="js-off">Javascript est desactivé dans votre navigateur.</p>
+  </noscript>
+
+  {% include "./block-browsehappy.twig" %}
+
+  {% block skiplink %}
+    {% include "../styleguide/4-skip-link.twig" %}
+  {% endblock %}
+
+  {% block header %}
+  <header role="banner" id="banner" class="banner">
+
+    {% block devcomments %}
+    {% endblock %}
+
+    {% block banner %}
+    {% endblock %}
+
+    {% block navmain %}
+    {% endblock %}
+
+  </header>
+  {% endblock %}
+
+
+  {% block main %}
+  <main role="main" id="main" class="main {% if page.main_class %} {{ page.main_class }}{% endif %}">
+    <div class="container main-container">
+
+      {% block breadcrumb %}
+        <div class="container">
+          {% include "../styleguide/4-breadcrumb.twig" %}
+        </div>
+      {% endblock %}
+
+      {% block content %}
+      {% endblock %}
+
+    </div>
+  </main>
+  {% endblock %}
+
+
+  {% block footer %}
+  <footer role="contentinfo" class="footer">
+    {% block footer_site %}
+    {% endblock %} <!-- fin bloc footer_modulable -->
+
+    {% block footer_gouv %}
+      {#% include "inc/footer-gouv-links.html" %#}
+    {% endblock %}
+  </footer>
+  {% endblock %} <!-- fin bloc footer -->
+
+  {% block scripts_bottom %}
+    <script src="./assets/scripts/main.js"></script>
+  {% endblock %} <!-- fin bloc script -->
+
+  {% block scripts_bottom_more %}
+  {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% extends "./layout-base.twig" %}
+{% set body_class = "scampi-stuff" %}
+
+{% block title %}
+  <title>{{ config.site.name }} - Index</title>
+{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="{{ config.site.description }}">
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="assets/css/index.css">
+{% endblock %}
+
+{% block banner %}
+  <div class="container">
+    <h1>Index {{ config.site.name }}</h1>
+    {% if config.site.description %}
+      <p class="baseline">{{ config.site.description }}</p>
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer_site %}
+  <div class="container">
+  <h2>Infos développement</h2>
+  <p>Ces gabarits ont été réalisés avec <a href="https://pidila.gitlab.io/scampi">Scampi</a> et <a href="https://pidila.gitlab.io/scampi-twig">Scampi-Twig</a>, deux produits développés par le <a href="https://pidila.gitlab.io/" title="Pôle intégration de la DILA">PiDILA</a>. Contact : pidila@dila.gouv.fr</p>
+
+  <div class="col-group package">
+    <div class="col package-item">
+      {% if configPackage.name %}
+        <h3>Dépôt du projet : <a href="{{ configPackage.homepage }}">{{ configPackage.name }}</a></h3>
+        <p>{{ configPackage.description }}</p>
+        <ul>
+          {% if configPackage.version %}<li>Version : {{ configPackage.version }}</li>{% endif %}
+          {% if configPackage.license %}<li>Licence : {{ configPackage.license }}</li>{% endif %}
+          {% if configPackage.author %}<li>Auteurs : {{ configPackage.author }}</li>{% endif %}
+          {% if configPackage.repository %}<li><a href="{{ configPackage.repository.url }}">Dépot Git</a></li>{% endif %}
+          {% if configPackage.bugs %}<li><a href="{{ configPackage.bugs.url }}">Signaler un bug</a></li>{% endif %}
+        </ul>
+      {% endif %}
+    </div>
+    <div class="col package-item">
+      {% if configScampi.name %}
+        <h3>Bibliothèque Scampi : <a href="{{ configScampi.homepage }}">{{ configScampi.name }}</a></h3>
+        <p>{{ configScampi.description }}</p>
+        <ul>
+          <li>Version : {{ configScampi.version }}</li>
+          <li>Licence : {{ configScampi.license }}</li>
+          <li>Auteurs : {{ configScampi.author }}</li>
+          <li><a href="{{ configScampi.repository.url }}">Dépot Git</a></li>
+          <li><a href="{{ configScampi.bugs.url }}">Signaler un bug</a></li>
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block skiplink %}{% endblock %}
+{% block breadcrumb %}{% endblock %}
+{% block navmain %}{% endblock %}
+{% block devcomments %}{% endblock %}
